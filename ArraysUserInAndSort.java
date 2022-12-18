@@ -11,6 +11,7 @@ public class ArraysUserInAndSort {
 	
 	//declare array
 	int myArray[] = new int[size];
+	int[] copiedArray = new int[myArray.length];
 	
 	
 	System.out.println("Enter values to be stored in array: "); 
@@ -20,23 +21,34 @@ public class ArraysUserInAndSort {
 	}
 	
 	//have to loop through array to print it
-	System.out.print("Here is the array: ");
+	System.out.println("Here is the array: ");
 	for (i = 0; i< size; i++)
 	{
 	System.out.print(myArray[i]);
 	}
 	
 //	System.out.println("The sorted array is: "  + Arrays.sort(myArray[i]);
-	
-
-	
+	for (i = 0; i<myArray.length; i++) {
+//	establishes an array as long as myArray
+		copiedArray[i] = myArray[i];
 	}
 	
-	public static void sort(int array[], int x) {
-		for(int i = 0; i < x; i++) {
-			
-		}
+	System.out.println("\nHere is the copied array: ");
+	for(i = 0; i<copiedArray.length; i++) {
+		System.out.print(copiedArray[i]);
+	}
+	
+	for(i = 0; i<copiedArray.length; i++) {
+		Arrays.sort(copiedArray);
 	}
 
-}
+	System.out.println("\nHere is the sorted copied array");
+	for(i = 0; i < copiedArray.length; i++ )
+	System.out.print(copiedArray[i]);
+	}
+	
+		
+	}
+
+
 
